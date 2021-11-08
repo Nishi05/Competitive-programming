@@ -1,26 +1,21 @@
 n = int(input())
-table = [0]*n
-waza = [0]*n
-time = []
+t_lst = []
+k_lst = []
+a_grand_lst = []
+need = [False]*n
+need[-1] = True
 for i in range(n):
-    table[i] = list(map(int, input().split()))
-    waza[i] = table[i][2:]
-    time[i] = table[i][0]
+    t, k, *a_lst = map(int, input().split())
+    t_lst.append(t)
+    k_lst.append(k)
+    a_grand_lst.append(a_lst)
 
-for i in range(n):
-    time[i] = 
+for i in range(n-1, 0, -1):
+    if need[i]:
+        for j in a_grand_lst[i]:
+            print(a_grand_lst)
+            print(j)
+            j -= 1
+            need[j] = True
 
-time = table[n-1][0]
-while 1:
-    for i in a:
-        time += table[i-1][0]
-        if table[i-1][1] != 0:
-            tamp = table[i-1][2:]
-        else:
-            tamp = 0
-    if tamp == 0:
-        break
-    else:
-        a = tamp
-
-# print(time)
+print(sum([t_lst[i] for i in range(n) if need[i]]))
