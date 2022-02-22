@@ -2,7 +2,7 @@ N = int(input())
 s = set()
 ans = []
 for _ in range(N):
-    cmd, dict = map(str,input().split())
+    cmd, dict = map(str, input().split())
     if cmd == 'insert':
         s.add(dict)
     elif cmd == 'find':
