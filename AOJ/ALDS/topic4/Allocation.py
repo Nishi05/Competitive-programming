@@ -1,6 +1,7 @@
 n, k = map(int, input().split())
 ws = [int(input()) for _ in range(n)]
 
+
 def check(m):
     need = 1
     sm = 0
@@ -13,6 +14,7 @@ def check(m):
         else:
             sm += w
     return need <= k
+
 
 lw = 0
 hi = 10**10
